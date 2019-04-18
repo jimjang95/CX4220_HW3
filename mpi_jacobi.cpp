@@ -16,12 +16,12 @@
 #include <assert.h>
 #include <math.h>
 #include <vector>
-#include <iostream>
 #include <algorithm>
 
 /*
  * TODO: Implement your solutions here
  */
+#include <cstring>
 
 void distribute_vector(const int n, double* input_vector, double** local_vector, MPI_Comm comm)
 {
