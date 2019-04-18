@@ -162,7 +162,7 @@ int main(int argc, char *argv[])
          double time_secs = (t_end.tv_sec - t_start.tv_sec)
             + (double) (t_end.tv_nsec - t_start.tv_nsec) * 1e-9;
          // output time
-         std::cerr << time_secs << std::endl;
+         std::cout << time_secs << std::endl;
          // write output
          if (write_output)
          {
