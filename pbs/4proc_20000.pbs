@@ -1,0 +1,17 @@
+#PBS -N 4proc_20000
+#PBS -l nodes=1:ppn=4
+#PBS -l walltime=7:00
+#PBS -q coc-ice
+#PBS -o $PBS_JOBID.out
+#PBS -e $PBS_JOBID.err
+
+cd ~//CX4220_HW3
+module load gcc mvapich2/2.2
+
+make
+
+mpirun -np 4 ./jacobi -n 20000 >> 20000_4proc.txt
+mpirun -np 4 ./jacobi -n 20000 >> 20000_4proc.txt
+mpirun -np 4 ./jacobi -n 20000 >> 20000_4proc.txt
+mpirun -np 4 ./jacobi -n 20000 >> 20000_4proc.txt
+mpirun -np 4 ./jacobi -n 20000 >> 20000_4proc.txt
