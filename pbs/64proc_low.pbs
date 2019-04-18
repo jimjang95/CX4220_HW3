@@ -1,0 +1,68 @@
+#PBS -N 64_proc_low
+#PBS -l nodes=4:ppn=16
+#PBS -l walltime=4:00
+#PBS -q coc-ice-multi
+#PBS -o $PBS_JOBID.out
+#PBS -e $PBS_JOBID.err
+
+cd ~//CX4220_HW3
+module load gcc mvapich2/2.2
+
+make
+
+mpirun -np 64 ./jacobi -n 100 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 200 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 300 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 400 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 500 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 600 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 700 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 800 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 900 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 1000 >> low_count_64proc.txt
+
+mpirun -np 64 ./jacobi -n 100 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 200 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 300 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 400 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 500 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 600 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 700 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 800 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 900 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 1000 >> low_count_64proc.txt
+
+mpirun -np 64 ./jacobi -n 100 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 200 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 300 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 400 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 500 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 600 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 700 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 800 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 900 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 1000 >> low_count_64proc.txt
+
+mpirun -np 64 ./jacobi -n 100 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 200 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 300 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 400 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 500 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 600 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 700 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 800 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 900 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 1000 >> low_count_64proc.txt
+
+mpirun -np 64 ./jacobi -n 100 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 200 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 300 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 400 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 500 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 600 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 700 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 800 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 900 >> low_count_64proc.txt
+mpirun -np 64 ./jacobi -n 1000 >> low_count_64proc.txt
+
+
