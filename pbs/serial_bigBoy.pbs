@@ -1,0 +1,17 @@
+#PBS -N serial_bigBoy
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=30:00
+#PBS -q coc-ice
+#PBS -o $PBS_JOBID.out
+#PBS -e $PBS_JOBID.err
+
+cd ~//CX4220_HW3
+module load gcc mvapich2/2.2
+
+make
+
+./jacobi -n 10000 >> bigBoy_serial.txt
+./jacobi -n 20000 >> bigBoy_serial.txt
+./jacobi -n 30000 >> bigBoy_serial.txt
+./jacobi -n 40000 >> bigBoy_serial.txt
+./jacobi -n 50000 >> bigBoy_serial.txt

@@ -1,0 +1,17 @@
+#PBS -N 64proc_bigBoy
+#PBS -l nodes=4:ppn=16
+#PBS -l walltime30:00
+#PBS -q coc-ice-multi
+#PBS -o $PBS_JOBID.out
+#PBS -e $PBS_JOBID.err
+
+cd ~//CX4220_HW3
+module load gcc mvapich2/2.2
+
+make
+
+mpirun -np 64 ./jacobi -n 10000 >> bigBoy_64proc.txt
+mpirun -np 64 ./jacobi -n 20000 >> bigBoy_64proc.txt
+mpirun -np 64 ./jacobi -n 30000 >> bigBoy_64proc.txt
+mpirun -np 64 ./jacobi -n 40000 >> bigBoy_64proc.txt
+mpirun -np 64 ./jacobi -n 50000 >> bigBoy_64proc.txt
